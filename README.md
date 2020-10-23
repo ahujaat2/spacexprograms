@@ -50,7 +50,7 @@ Apart from these components files, the structure contains .bablerc.json file for
 
 ## How to use?
 - **Get the latest code:**
-[Clone the repository](). You will need node and npm installed globally on your machine.
+[Clone the repository](https://github.com/ahujaat2/spacexprograms). You will need node and npm installed globally on your machine.
 - **Installation**: npm install
 - **To run tests**: npm test
 - **To start server**: npm start
