@@ -1,0 +1,175 @@
+body{
+  overflow-x: hidden;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+}
+
+.App{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  width: 100vw;
+  overflow-y: scroll;
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+.header{
+  flex: 0.08;
+  padding-left: 10px;
+  width: auto;
+  align-self: flex-start;
+}
+
+.header > h2 {
+  margin: 10px 0 10px 0;
+
+}
+
+.footer{
+  flex: 0.08;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  text-align: center;
+}
+
+.programs-body{
+  flex: 0.84;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+.filter{
+  flex: 0.15;
+  display: flex;
+  max-width: 250px;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.programs{
+  flex: 0.85;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner{
+  flex: 0.85;
+}
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border-top: 4px solid #8fc447;
+  border-right: 4px solid transparent;
+  animation: spinner 0.7s linear infinite;
+}
+
+.error{
+  font-size: 2em;
+  font-weight: 400;
+  color: #8fc447;
+  flex: 0.85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media screen and (min-width: 1440px) {
+  .App{
+    display: flex;
+    align-items: center;
+  }
+  .header{
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .programs-body{
+    flex-direction: row !important;
+  }
+  .filter{
+    flex: 0.15 !important;
+  }
+  .programs{
+    flex: 0.85 !important;
+    flex-direction: row !important;
+    min-width: 1120px;
+    overflow-x: scroll;
+  }
+  .prog{
+    flex: 0.25 !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .programs-body{
+    flex-direction: row !important;
+  }
+  .filter{
+    flex: 0.15 !important;
+  }
+  .programs{
+    flex: 0.85 !important;
+    flex-direction: row !important;
+    min-width: 560px;
+    overflow-x: scroll;
+  }
+  .prog{
+    flex: 0.5 !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .programs-body{
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .filter{
+    flex: 1 !important;
+  }
+  .programs{
+    flex: 1 !important;
+    flex-direction: column !important;
+  }
+  .prog{
+    flex: 1 !important;
+  }
+}

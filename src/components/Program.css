@@ -1,0 +1,43 @@
+.prog{
+	background-color: white;
+	width: auto;
+	max-width: 220px;
+	margin: 20px;
+	display: flex;
+	padding: 10px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	height: 400px;
+	flex: 0.25;
+	animation-name: fade-in;
+  	animation-duration: 1s;
+}
+
+.prog-img{
+	width: 200px;
+	height: 180px;
+	padding: 5px;
+	background-color: whitesmoke;
+}
+
+.prog-details{
+	width: 220px;
+	padding: 10px;
+	font-size: 0.8em;
+	justify-content: flex-start;
+}
+
+.prog-title{
+	color: #4b8ab8;
+}
+
+.text{
+	color: #616363;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
